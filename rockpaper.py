@@ -1,3 +1,4 @@
+cd rockpaper-assignment
 import random
 
 import random
@@ -12,13 +13,18 @@ def get_player_choice():
     return input("Enter rock, paper, or scissors: ").lower()
 
 def determine_winner(player, computer):
-    if player == computer:
-        return "It's a tie!"
-    elif (player == "rock" and computer == "scissors") or \
-         (player == "scissors" and computer == "paper") or \
-         (player == "paper" and computer == "rock"):
+    while player == computer:
+        print("It's a tie! Computer chooses again...")
+        computer = get_computer_choice()  # Generate a new computer choice
+        print(f"New computer choice: {computer}")
+
+    if (player == "rock" and computer == "scissors") or \
+       (player == "scissors" and computer == "paper") or \
+       (player == "paper" and computer == "rock"):
         return "You win!"
     else:
+        return "Computer wins!"
+
         return "Computer wins!"
 
 def get_computer_choice():
@@ -36,6 +42,13 @@ def determine_winner(player, computer):
         return "You win!"
     else:
         return "Computer wins!"
+# This is a test change to ensure commits are reflected
+print("This is a test change in the Noties branch")
+
+# This is a new change to verify the new branch
+print("This change is to verify that the new-noties-branch has distinct changes")
+
+print("new branch")
 
 def main():
     print("Welcome to Rock-Paper-Scissors!")
