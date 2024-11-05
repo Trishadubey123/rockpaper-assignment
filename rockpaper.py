@@ -40,5 +40,9 @@ def main():
         if play_again != 'yes':
             break
 
+            # Verification line added to ensure changes are detected
+print("This is a new line for change verification.")
+
+
 if __name__ == "__main__":
     main()
