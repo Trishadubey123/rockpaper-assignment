@@ -49,5 +49,9 @@ def main():
         if result != "It's a tie!":
             break  # End the game if there's a winner
 
+            # Verification line added to ensure changes are detected
+print("This is a new line for change verification.")
+
+
 if __name__ == "__main__":
     main()
